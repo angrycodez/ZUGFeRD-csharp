@@ -29,17 +29,9 @@ namespace s2industries.ZUGFeRD
     public class Tax
     {
         /// <summary>
-        /// Returns the amount of the tax (Percent * BasisAmount)
-        /// 
-        /// This information is calculated live.
+        /// The amount of the tax
         /// </summary>
-        public decimal TaxAmount
-        {
-            get
-            {
-                return 0.01m * this.Percent * this.BasisAmount;
-            }
-        }
+        public decimal TaxAmount { get;set; }   // Modified from the original Source to avoid rounding errors
 
         /// <summary>
         /// VAT category taxable amount
